@@ -10,16 +10,7 @@
 namespace AITRSurveyApplicationWebForms {
     
     
-    public partial class WebForm1 {
-        
-        /// <summary>
-        /// logoutBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logoutBtn;
+    public partial class SurveySearch {
         
         /// <summary>
         /// username control.
@@ -103,12 +94,12 @@ namespace AITRSurveyApplicationWebForms {
         protected global::System.Web.UI.WebControls.DropDownList ddlBankService;
         
         /// <summary>
-        /// registerBtn control.
+        /// btnSearchSurvey control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerBtn;
+        protected global::System.Web.UI.WebControls.Button btnSearchSurvey;
     }
 }

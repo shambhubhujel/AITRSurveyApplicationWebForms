@@ -5,6 +5,7 @@
     <div class="container">
 			<h2 class="form-heading">Log in to AITR Survey Admin</h2>
             <span>(This log in is only for AITR staff.!!!)</span>
+        <hr />
             <br /><br />
             
             <div class="form-fields">

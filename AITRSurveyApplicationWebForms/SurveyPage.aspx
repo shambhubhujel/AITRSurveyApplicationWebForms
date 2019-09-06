@@ -1,9 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SurveyPage.aspx.cs" Inherits="AITRSurveyApplicationWebForms.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SurveyPage.aspx.cs" Inherits="AITRSurveyApplicationWebForms.SurveyPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <section id="main" class="wrapper ">
 				<div class="container 8u$ center">
 					<header class="major ">
 						<h2>Survey Questions</h2>
+                        <hr />
 					</header>
                     
                       <div class="form-row d-flex justify-content-center">
