@@ -1,13 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SurveySearch.aspx.cs" Inherits="AITRSurveyApplicationWebForms.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SurveySearch.aspx.cs" Inherits="AITRSurveyApplicationWebForms.SurveySearch" %>
 <asp:Content ID="SurveySearch" ContentPlaceHolderID="MainContent" runat="server">
     <section id="main" class="wrapper ">
 				<div class="container 8u$ center">
 					<header class="major ">
-						<h2>Admin Dashboard</h2>
-                        <h2>
-
-                        <asp:Button ID="logoutBtn" runat="server" Text="Logout" CssClass="btn btn-primary btn-sm ml-2" />
-                        </h2>
+						<h2>Survey Report Dashboard</h2>
+                        <hr />
 					</header>
                     
                       <div class="form-row d-flex justify-content-center">
@@ -58,7 +55,7 @@
                               </asp:DropDownList>
                         </div>
                           <div class="form-group col-md-1">
-                            <asp:Button ID="registerBtn" runat="server" Text="Search" CssClass="btn btn-primary btn-sm"/>
+                            <asp:Button ID="btnSearchSurvey" runat="server" Text="Search" CssClass="btn btn-primary btn-sm"/>
                         </div>
 
                     </div>

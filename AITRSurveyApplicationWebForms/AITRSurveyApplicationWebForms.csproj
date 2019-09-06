@@ -182,6 +182,10 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="StaffLogin.aspx" />
+    <Content Include="UserControls\CheckBoxUserControl.ascx" />
+    <Content Include="UserControls\DropDownUserControl.ascx" />
+    <Content Include="UserControls\RadioUserControl.ascx" />
+    <Content Include="UserControls\TextBoxUserControl.ascx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -244,6 +248,34 @@
     </Compile>
     <Compile Include="StaffLogin.aspx.designer.cs">
       <DependentUpon>StaffLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CheckBoxUserControl.ascx.cs">
+      <DependentUpon>CheckBoxUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CheckBoxUserControl.ascx.designer.cs">
+      <DependentUpon>CheckBoxUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DropDownUserControl.ascx.cs">
+      <DependentUpon>DropDownUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DropDownUserControl.ascx.designer.cs">
+      <DependentUpon>DropDownUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RadioUserControl.ascx.cs">
+      <DependentUpon>RadioUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RadioUserControl.ascx.designer.cs">
+      <DependentUpon>RadioUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TextBoxUserControl.ascx.cs">
+      <DependentUpon>TextBoxUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\TextBoxUserControl.ascx.designer.cs">
+      <DependentUpon>TextBoxUserControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
