@@ -13,5 +13,11 @@ namespace AITRSurveyApplicationWebForms
         {
 
         }
+
+        protected void btnStartSurvey_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SurveyPage.aspx");
+
+        }
     }
 }

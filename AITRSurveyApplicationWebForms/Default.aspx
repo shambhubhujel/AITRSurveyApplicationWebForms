@@ -5,7 +5,7 @@
     <div class="jumbotron">
         <h1>AITR Survey Program</h1>
         <p class="lead">Please spend some time to complete our short survey.<br />Thank you.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Sart Survey &raquo;</a></p>
+        <p> <asp:Button ID="btnStartSurvey"  class="btn btn-primary btn-lg" runat="server" Text="Start Survey>>" OnClick="btnStartSurvey_Click" /></p>
     </div>
 
     <div class="row">

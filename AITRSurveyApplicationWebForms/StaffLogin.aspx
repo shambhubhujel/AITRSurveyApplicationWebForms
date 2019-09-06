@@ -1,9 +1,10 @@
-﻿<%@ Page Title="Log In to UserApp" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"CodeBehind="StaffLogin.aspx.cs" Inherits="AITRSurveyApplicationWebForms.StaffLogin" %>
+﻿<%@ Page Title="Staff Login to AITR System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"CodeBehind="StaffLogin.aspx.cs" Inherits="AITRSurveyApplicationWebForms.StaffLogin" %>
 
 <asp:Content ID="SatffLogin" ContentPlaceHolderID="MainContent" runat="server">
     
     <div class="container">
-			<h2 class="form-heading">Log in to UserApp</h2>
+			<h2 class="form-heading">Log in to AITR Survey Admin</h2>
+            <span>(This log in is only for AITR staff.!!!)</span>
             <br /><br />
             
             <div class="form-fields">

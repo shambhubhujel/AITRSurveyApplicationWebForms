@@ -7,21 +7,21 @@ using System.Web.UI.WebControls;
 
 namespace AITRSurveyApplicationWebForms
 {
-    public partial class Register : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void SignUp_Click(object sender, EventArgs e)
+        protected void btnSkip_Click(object sender, EventArgs e)
         {
 
         }
 
-        protected void Skip_Click(object sender, EventArgs e)
+        protected void btnNextQue_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+
         }
     }
 }

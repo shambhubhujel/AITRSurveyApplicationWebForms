@@ -5,6 +5,7 @@
 
     <div class="container">
             <h2 class="form-heading">Respondent Register</h2>
+            <span>[This Register is only for respondent and is optional. !!!]</span>
             <br />
             <br />
 
