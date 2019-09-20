@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Staff Login to AITR System" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"CodeBehind="StaffLogin.aspx.cs" Inherits="AITRSurveyApplicationWebForms.StaffLogin" %>
+﻿<%@ Page Title="Staff Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"CodeBehind="StaffLogin.aspx.cs" Inherits="AITRSurveyApplicationWebForms.StaffLogin" %>
 
 <asp:Content ID="SatffLogin" ContentPlaceHolderID="MainContent" runat="server">
     
@@ -9,7 +9,7 @@
             <br /><br />
             
             <div class="form-fields">
-                <asp:TextBox ID="txtUserName" runat="server" class="form-control" placeholder="Email" autofocus></asp:TextBox>
+                <asp:TextBox ID="txtUserName" runat="server" class="form-control" placeholder="Email" autofocus="true"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ValidationGroup='valGroup1' ControlToValidate="txtUserName" ErrorMessage="Please enter Username.Required!!!!" ForeColor="#CC0000"></asp:RequiredFieldValidator>
 
                 <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" class="form-control" ValidationGroup='valGroup1' placeholder="Password" ></asp:TextBox>

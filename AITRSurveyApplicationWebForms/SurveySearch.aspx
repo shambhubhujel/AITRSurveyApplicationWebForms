@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SurveySearch.aspx.cs" Inherits="AITRSurveyApplicationWebForms.SurveySearch" %>
+﻿<%@ Page Title="Survey Search" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SurveySearch.aspx.cs" Inherits="AITRSurveyApplicationWebForms.SurveySearch" %>
 <asp:Content ID="SurveySearch" ContentPlaceHolderID="MainContent" runat="server">
     <section id="main" class="wrapper ">
 				<div class="container 8u$ center">
