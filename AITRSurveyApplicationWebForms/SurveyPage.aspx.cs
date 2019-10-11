@@ -15,15 +15,16 @@ namespace AITRSurveyApplicationWebForms
     public partial class SurveyPage : System.Web.UI.Page
     {
         //set up db connection
-         public static string connectionString = ConfigurationManager.ConnectionStrings["DB_9AB8B7_D19DDA6422ConnectionString"].ConnectionString;
+        public static string connectionString = ConfigurationManager.ConnectionStrings["DB_9AB8B7_D19DDA6422ConnectionString"].ConnectionString;
 
         SqlConnection conn = new SqlConnection(connectionString);
+        public static SortedSet<int> followupTracker = new SortedSet<int>();
         public static int QuestionID;
-        public string RespondentIP;
-        public DateTime currentDate;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             Object userAnswer = Session["UserAnswer"];
             if (userAnswer != null)
             {
@@ -36,6 +37,7 @@ namespace AITRSurveyApplicationWebForms
             {
                 nextQuesID = new Stack<int>();
                 nextQuesID.Push(1);
+                followupTracker.Add(1);
                 Session["nextQueID"] = nextQuesID;
             }
             if (nextQuesID.Count() > 0)
@@ -44,7 +46,7 @@ namespace AITRSurveyApplicationWebForms
             }
             Questions question = DbUtlities.getQuestion(QuestionID);
 
-            
+           
             
             //conn.ConnectionString = "Data Source=SQL5017.site4now.net;Initial Catalog=DB_9AB8B7_D19DDA6422;Persist Security Info=True;User ID=DB_9AB8B7_D19DDA6422_admin;Password=hga6jJJZ";
 
@@ -104,6 +106,7 @@ namespace AITRSurveyApplicationWebForms
                     {
                         ListItem newItem = new ListItem();
                         newItem.Text = option.QuesOption;
+                        newItem.Value = option.QueOptId.ToString();
                         radioButtonControl.QuestionRadioButtonList.Items.Add(newItem); //add item to option list
                     }
 
@@ -119,7 +122,39 @@ namespace AITRSurveyApplicationWebForms
 
         protected void btnSkip_Click(object sender, EventArgs e)
         {
+            // Accesss the current question from PlaceHolder
+            Control userControl = PlaceHolder1.FindControl(Session["CURRENT_QUESTION_TYPE"].ToString());
+
+            // Access question answers from session
+            List<Answers> questionAnswersInSession = (List<Answers>)Session["Question_ANSWER_LIST"];
+            if (questionAnswersInSession == null)
+            {
+                // Null means this is the first question so create new question answer list
+                questionAnswersInSession = new List<Answers>();
+                Session["Question_ANSWER_LIST"] = questionAnswersInSession;
+            }
+
+            Stack<int> followUpQuestionList = (Stack<int>)Session["nextQueID"];
+
+            int QuestionID = followUpQuestionList.Pop();
             Questions question = DbUtlities.getQuestion(QuestionID);
+            if (question.NextQueID != null)
+            {
+                //followUpQuestionList.Push((int)question.nextQuestionId);
+                insertNextQuestionId((int)question.NextQueID, followUpQuestionList);
+            }
+            Session["UserAnswer"] = "";
+
+            if (followUpQuestionList.Count() > 0)
+            {
+                //Session["CURRENT_QUESTION_ID"] = question.nextQuestionId;
+                Response.Redirect("SurveyPage.aspx");
+            }
+            else
+            {
+                Response.Redirect("EndofSurvey.aspx");
+            }
+
         }
 
         protected void btnNextQue_Click(object sender, EventArgs e)
@@ -198,7 +233,7 @@ namespace AITRSurveyApplicationWebForms
                 {
                     if (item.Selected)
                     {
-                        answerVar += item.Text + ",";
+                        answerVar += item.Text;
 
                         if (item.Attributes["nextQuestionId"] != null)
                         {
@@ -209,7 +244,7 @@ namespace AITRSurveyApplicationWebForms
                         Answers answer = new Answers();
                         answer.Answer = item.Text;
                         answer.QuestionId = QuestionID;
-                        answer.QueOptId = int.Parse(item.Value);
+                        answer.QueOptId =int.Parse(item.Value);
 
                         questionAnswersInSession.Add(answer);
                     }
