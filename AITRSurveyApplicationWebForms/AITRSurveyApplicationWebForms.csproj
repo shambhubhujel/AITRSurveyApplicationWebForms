@@ -153,6 +153,7 @@
     <Content Include="assests\fonts\fontawesome-webfont.woff" />
     <Content Include="assests\fonts\fontawesome-webfont.woff2" />
     <Content Include="assests\fonts\FontAwesome.otf" />
+    <Content Include="RespondentAnswers.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -321,6 +322,13 @@
     </Compile>
     <Compile Include="EndofSurvey.aspx.designer.cs">
       <DependentUpon>EndofSurvey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RespondentAnswers.aspx.cs">
+      <DependentUpon>RespondentAnswers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RespondentAnswers.aspx.designer.cs">
+      <DependentUpon>RespondentAnswers.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

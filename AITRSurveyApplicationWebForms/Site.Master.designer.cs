@@ -31,6 +31,15 @@ namespace AITRSurveyApplicationWebForms {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl admin;
         
         /// <summary>
+        /// respondent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl respondent;
+        
+        /// <summary>
         /// login control.
         /// </summary>
         /// <remarks>
