@@ -11,6 +11,7 @@
                           <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
                            <br /><br />
                           <asp:Button ID="btnSkip" runat="server" Text="Skip" CssClass="btn btn-info btn-sm ml-2" OnClick="btnSkip_Click" />
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                            <asp:Button ID="btnNextQue" runat="server" Text="Next" CssClass="btn btn-primary btn-sm ml-2" OnClick="btnNextQue_Click" />
                           <br /><asp:Label ID="Label1" runat="server" ></asp:Label>
 

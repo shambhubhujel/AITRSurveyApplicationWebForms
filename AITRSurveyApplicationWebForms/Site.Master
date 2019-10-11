@@ -15,12 +15,20 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 
 
 </head>
-<body>
+<body class="landing">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -40,6 +48,7 @@
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
             </Scripts>
+
         </asp:ScriptManager>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -55,14 +64,17 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav pull-left">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/SurveySearch">Search</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li id="admin" runat="server"><a runat="server" href="~/SurveySearch">Dashboard</a></li>
 
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                        <li><a runat="server" href="~/StaffLogin">Staff LogIn</a></li>
-                        <li><a runat="server" href="~/Register">Register</a></li>
+                        <li runat="server" id="login"><a runat="server" href="~/StaffLogin">LogIn</a></li>
+                        <li id="logout">
+                            <asp:LinkButton ID="Logout" runat="server" OnClick="Logout_Click" CausesValidation="false">Logout</asp:LinkButton>
+                        </li>
+                        <li class="ml-4"><a runat="server" href="#"><asp:Label ID="username" runat="server" CssClass="text-info font-weight-bold h4"></asp:Label></a></li>
+					
+                        <li id="register" runat="server"><a runat="server" href="~/Register">Register</a></li>
                     </ul>
                 </div>
             </div>
@@ -77,5 +89,42 @@
         </div>
 
     </form>
+   
 </body>
 </html>
+<script>
+    const getLoginID = document.documentElement.querySelector('#login')
+    const getLogoutID = document.documentElement.querySelector('#logout')
+    const getAdminID = document.documentElement.querySelector('#admin')
+
+
+        if (getCookie("adminLogin")) {// if exists
+
+            getLoginID.classList.add("none");
+            getLogoutID.classList.remove("none");
+            getAdminID.classList.remove("none");
+            console.log(getCookie("adminLogin"))
+            console.log(getCookie("userLogin"))
+
+        }
+        else if (getCookie("userLogin")) {
+
+            getLoginID.classList.add("none");
+            getLogoutID.classList.remove("none");
+            getAdminID.classList.add("none");
+            console.log(getCookie("adminLogin"))
+            console.log(getCookie("userLogin"))
+        }
+        else {
+            getLogoutID.classList.add("none");
+            getLoginID.classList.remove("none");
+            //getAdminID.classList.add("d-none");
+        }
+
+        function getCookie(name) {
+            var re = new RegExp(name + "=([^;]+)");
+            var value = re.exec(document.cookie);
+            return (value != null) ? unescape(value[1]) : null;
+        }
+        
+    </script>

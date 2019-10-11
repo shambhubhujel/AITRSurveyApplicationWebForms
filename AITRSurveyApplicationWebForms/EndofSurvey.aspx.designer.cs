@@ -10,15 +10,24 @@
 namespace AITRSurveyApplicationWebForms {
     
     
-    public partial class _Default {
+    public partial class EndofSurvey {
         
         /// <summary>
-        /// btnStartSurvey control.
+        /// questionAnswerDisplayTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnStartSurvey;
+        protected global::System.Web.UI.WebControls.Table questionAnswerDisplayTable;
+        
+        /// <summary>
+        /// btnSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }

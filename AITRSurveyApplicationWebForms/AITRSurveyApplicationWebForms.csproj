@@ -107,6 +107,16 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="assests\calendarIcon .png" />
+    <Content Include="assests\css\font-awesome.min.css" />
+    <Content Include="assests\css\images\overlay.png" />
+    <Content Include="assests\css\main.css" />
+    <Content Include="assests\font-awesome.min.css" />
+    <Content Include="assests\fonts\fontawesome-webfont.svg" />
+    <Content Include="assests\js\jquery.min.js" />
+    <Content Include="assests\js\main.js" />
+    <Content Include="assests\js\skel.min.js" />
+    <Content Include="assests\js\util.js" />
+    <Content Include="assests\main.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -115,8 +125,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="font-awesome.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="main.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
@@ -135,6 +147,12 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="EndofSurvey.aspx" />
+    <Content Include="assests\fonts\fontawesome-webfont.eot" />
+    <Content Include="assests\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assests\fonts\fontawesome-webfont.woff" />
+    <Content Include="assests\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assests\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -216,6 +234,8 @@
     <Compile Include="Models\Answers.cs" />
     <Compile Include="Models\QuestionOptions.cs" />
     <Compile Include="Models\Questions.cs" />
+    <Compile Include="Models\Registered.cs" />
+    <Compile Include="Models\Respondents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -294,6 +314,13 @@
     </Compile>
     <Compile Include="SurveyPage.aspx.designer.cs">
       <DependentUpon>SurveyPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EndofSurvey.aspx.cs">
+      <DependentUpon>EndofSurvey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EndofSurvey.aspx.designer.cs">
+      <DependentUpon>EndofSurvey.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
