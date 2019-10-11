@@ -17,6 +17,7 @@ namespace AITRSurveyApplicationWebForms
                 admin.Visible = true;
                 login.Visible = false;
                 register.Visible = false;
+                respondent.Visible = false;
                 Logout.Visible = true;
             }
             else if (Session["userisLoggedIn"] !=null)
@@ -24,11 +25,13 @@ namespace AITRSurveyApplicationWebForms
                 admin.Visible = false;
                 login.Visible = false;
                 register.Visible = false;
+                respondent.Visible = true;
                 Logout.Visible = true;
             }
             else
             {
                 Logout.Visible = false;
+                respondent.Visible = false;
             }
             
             // Checks if username is logged in, if true assigns username else assign empty string

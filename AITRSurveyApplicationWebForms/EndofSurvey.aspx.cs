@@ -92,7 +92,7 @@ namespace AITRSurveyApplicationWebForms
                     // Stores each answers to db
                     DbUtlities.insertAnswers(answer.QuestionId, RespondentID, answer.Answer, answer.QueOptId);
                 }
-                Response.Redirect("Default.aspx");
+                Response.Redirect("RespondentAnswers.aspx");
 
         }
     }

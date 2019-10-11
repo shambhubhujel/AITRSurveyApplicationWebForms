@@ -17,23 +17,11 @@
             <br />
             <br />
             <div class="form-row d-flex justify-content-center">
-                <div class="form-group col-md-10">
-                    <label for="inputEmail4" class="text-dark h6 font-weight-bold">Username:</label>
-                    <asp:TextBox ID="username" runat="server" CssClass="form-control" placeholder="Username" autofocus="true"></asp:TextBox>
-                    <asp:Label ID="userNameTaken" runat="server" ForeColor="#FF3300"></asp:Label>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ValidationGroup='valGroup1' ControlToValidate="username" runat="server" ErrorMessage="Username is required" ForeColor="Red"></asp:RequiredFieldValidator>
-
-                </div>
-
-                <div class="form-group col-md-10">
-                    <label for="inputEmail4" class="text-dark h6 font-weight-bold">Password:</label>
-                    <asp:TextBox ID="password" runat="server" CssClass="form-control" placeholder="Your Password" TextMode="Password"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ValidationGroup='valGroup1' ControlToValidate="password" ErrorMessage="Password is required" ForeColor="Red"></asp:RequiredFieldValidator>
-                </div>
+                
 
                 <div class="form-group col-md-10">
                     <label for="inputEmail4" class="text-dark h6 font-weight-bold">First Name:</label>
-                    <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" placeholder="Given Name"></asp:TextBox>
+                    <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" autofocus="true" placeholder="Given Name"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvUsername" ValidationGroup='valGroup1' runat="server" ControlToValidate="txtFirstName" ErrorMessage="Please enter FirstName.Required!!!!" ForeColor="#CC0000"></asp:RequiredFieldValidator>
 
                 </div>
@@ -62,6 +50,19 @@
                     <label for="inputEmail4" class="text-dark h6 font-weight-bold">Contact Number:</label>
                     <asp:TextBox ID="txtContactNumber" runat="server" TextMode="Number" class="form-control" ValidationGroup='valGroup1' placeholder="Your Contact Number"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ValidationGroup='valGroup1' runat="server" ControlToValidate="txtContactNumber" ErrorMessage="Please enter contact number.Required!!!!" ForeColor="#CC0000"></asp:RequiredFieldValidator>
+                </div>
+                <div class="form-group col-md-10">
+                    <label for="inputEmail4" class="text-dark h6 font-weight-bold">Username:</label>
+                    <asp:TextBox ID="username" runat="server" CssClass="form-control" placeholder="Username" ></asp:TextBox>
+                    <asp:Label ID="userNameTaken" runat="server" ForeColor="#FF3300"></asp:Label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ValidationGroup='valGroup1' ControlToValidate="username" runat="server" ErrorMessage="Username is required" ForeColor="Red"></asp:RequiredFieldValidator>
+
+                </div>
+
+                <div class="form-group col-md-10">
+                    <label for="inputEmail4" class="text-dark h6 font-weight-bold">Password:</label>
+                    <asp:TextBox ID="password" runat="server" CssClass="form-control" placeholder="Your Password" TextMode="Password"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ValidationGroup='valGroup1' ControlToValidate="password" ErrorMessage="Password is required" ForeColor="Red"></asp:RequiredFieldValidator>
                 </div>
 
 

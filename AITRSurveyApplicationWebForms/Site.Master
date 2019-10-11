@@ -65,6 +65,7 @@
                     <ul class="nav navbar-nav pull-left">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li id="admin" runat="server"><a runat="server" href="~/SurveySearch">Dashboard</a></li>
+                        <li id="respondent" runat="server"><a runat="server" href="~/RespondentAnswers">Your Response</a></li>
 
                     </ul>
                     <ul class="nav navbar-nav pull-right">
