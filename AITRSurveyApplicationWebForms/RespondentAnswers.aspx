@@ -9,7 +9,6 @@
                 <h2>Survey Information</h2>
                 <span>Here is your review of you survey response!!</span>
                 <hr />
-                <%--<p>User Id: <%= Session["registeredID"] %></p>--%>
             </header>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Height="146px" Width="774px">
                 <Columns>
@@ -32,6 +31,6 @@
     <br />
     <br />
     <div class="form-group justify-content-center">
-        <asp:Button ID="btn_FinishSurvey" runat="server" Text="Finish Survey" CssClass="btn btn-primary btn-sm ml-2" OnClick="btn_FinishSurvey_Click" />
+        <asp:Button ID="btn_FinishSurvey" runat="server" Text="Close" CssClass="btn btn-primary btn-sm ml-2" OnClick="btn_FinishSurvey_Click" />
     </div>
 </asp:Content>
